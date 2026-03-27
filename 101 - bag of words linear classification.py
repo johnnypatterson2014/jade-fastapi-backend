@@ -2,9 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from sklearn.datasets import make_blobs
+import torch
+import torch.nn as nn
+from einops import reduce
 
 # Set a seed so that the results are consistent.
-np.random.seed(3) 
+np.random.seed(3)
 
 ## --------------------------- Answer for question 1a in XCS221 assignment 2
 # For the tweet **"so so worried about tomorrow"**, count each word's occurrences against the vocabulary:
@@ -352,6 +355,31 @@ $$\frac{\partial L}{\partial b^{(1)}} = \frac{\partial L}{\partial \text{pre-act
 > ⚠️ **Dead ReLU Problem:** All gradients for W⁽¹⁾ and b⁽¹⁾ are **zero** because both hidden neurons received negative pre-activations, causing ReLU to zero them out. This means the first layer weights **receive no update** during this gradient step — a classic example of the *dying ReLU* problem, where neurons get permanently stuck and stop learning.
 '''
 
+
+
+## --------------------------- Answer for 2e
+def text_to_average_embedding(text: str, vocab, embedding_layer: nn.Embedding) -> torch.Tensor:
+    """
+    Convert text to an averaged embedding vector using learnable embeddings.
+
+    @param text: Input text string
+    @param vocab: Vocabulary object
+    @param embedding_layer: PyTorch embedding layer
+    @return: A single tensor representing the averaged embedding
+    """
+    # Build list of vocabulary indices for each word in the text
+    indices = [vocab[word] for word in text.split()]
+
+    # Convert to a long tensor (required by nn.Embedding)
+    indices_tensor = torch.tensor(indices, dtype=torch.long)
+
+    # Look up the embedding for each word: shape (num_words, embedding_dim)
+    embeddings = embedding_layer(indices_tensor)
+
+    # Average across the word dimension → shape (embedding_dim,)
+    averaged = reduce(embeddings, 'words embedding -> embedding', 'mean')
+
+    return averaged
 
 
 ## --------------------------- Answer for 2d
