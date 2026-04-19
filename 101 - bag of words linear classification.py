@@ -392,18 +392,18 @@ First, let's organize the words by type and observe their coordinates:
 |----------|------|-----------|
 | **Positive** | amazing | [**+0.8, +0.6**] |
 | **Positive** | love | [**+0.9, +0.4**] |
-| **Negative** | angry | [**−0.6, −0.8**] |
-| **Negative** | hate | [**−0.8, −0.5**] |
-| **Negative** | scared | [**−0.5, −0.7**] |
-| **Negative** | worried | [**−0.3, −0.6**] |
-| **Negative** | spiders | [−0.3, −0.4] |
+| **Negative** | angry | [**-0.6, -0.8**] |
+| **Negative** | hate | [**-0.8, -0.5**] |
+| **Negative** | scared | [**-0.5, -0.7**] |
+| **Negative** | worried | [**-0.3, -0.6**] |
+| **Negative** | spiders | [-0.3, -0.4] |
 | **Neutral** | of | [0.0, 0.0] |
 | **Neutral** | this | [0.0, 0.0] |
 | **Neutral** | so | [0.1, 0.0] |
-| **Neutral** | about | [0.0, −0.1] |
+| **Neutral** | about | [0.0, -0.1] |
 | **Neutral** | day | [0.2, 0.1] |
-| **Neutral** | tomorrow | [0.2, −0.2] |
-| **Neutral** | waiting | [−0.1, −0.3] |
+| **Neutral** | tomorrow | [0.2, -0.2] |
+| **Neutral** | waiting | [-0.1, -0.3] |
 
 ---
 
