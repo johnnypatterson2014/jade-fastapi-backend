@@ -1,0 +1,44 @@
+[
+  {
+    "landmark": "home",
+    "geo": "49.2754042,-123.1244141"
+  },
+  {
+    "landmark": "theater",
+    "geo": "49.279773399999996,-123.121631"
+  },
+  {
+    "landmark": "dovetail",
+    "amenity": "restaurant",
+    "cuisine": "contemporary",
+    "geo": "49.2759244,-123.1203101"
+  },
+  {
+    "amenity": "ferry_terminal",
+    "geo": "49.271707, -123.117937"
+  },
+  {
+    "amenity": "restaurant",
+    "cuisine": "italian",
+    "geo": "49.273309, -123.123069"
+  },
+  {
+    "amenity": "exercise",
+    "leisure": "boxing_class",
+    "geo": "49.275017, -123.115135"
+  },
+  {
+    "amenity": "cafe",
+    "shop": "supermarket",
+    "geo": "49.279105,-123.1155225"
+  },
+  {
+    "amenity": "food",
+    "shop": "pet",
+    "geo": "49.2753178,-123.132899"
+  },
+  {
+    "amenity": "bicycle_parking",
+    "geo": "49.277394,-123.114403"
+  }
+]
